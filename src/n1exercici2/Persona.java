@@ -3,15 +3,15 @@ package n1exercici2;
 public class Persona{
 	private String nom;
 	private String cognom;
-	private int age;
+	private int edat;
 	
-	public Persona(String nom, String cognom, int age){
+	public Persona(String nom, String cognom, int edat){
 		this.nom = nom;
 		this.cognom = cognom;
-		this.age = age;
+		this.edat = edat;
 	}
 	
-	public String getName() {
+	public String getNom() {
 		return this.nom;
 	}
 	
@@ -19,13 +19,13 @@ public class Persona{
 		return this.cognom;
 	}
 	
-	public int getAge() {
-		return this.age;
+	public int getEdat() {
+		return this.edat;
 	}
 
 	@Override
 	public String toString() {
-		return nom +" " + cognom + ", " + age + " years old";
+		return nom + " " + cognom + ", " + edat + " anys.";
 	}
 	
 	

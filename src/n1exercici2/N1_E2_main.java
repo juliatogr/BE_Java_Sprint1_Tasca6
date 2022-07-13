@@ -1,25 +1,31 @@
 package n1exercici2;
 
-import java.io.File;
-import java.io.IOException;
-
 public class N1_E2_main {
 
-	public static void main(String[] args) throws ArrayIndexOutOfBoundsException, IOException {
-
-		try {
+	public static void main(String[] args) {
+		
+		System.out.println("****Creating 3 different objects of different types****");
+		System.out.println();
+		
+		Persona p = new Persona("Maria", "Pons", 30);
+		String txt = "Hola";
+		int num = 2;
 			
-			File dir = new File(args[0]);
-		    File[] fileList = dir.listFiles();
-		    for (File f : fileList) {
-		    	System.out.println(f.getName());
-		    }
-
-		}catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println(e.getMessage());
-			System.out.println("You must introduce a path when executing the file.");
-			System.out.println("For example: java N1_E1_main.java D:/Documentos");
-		}
+		System.out.println("Object of type Persona: p = " + p);
+		System.out.println("Object of type String: txt = " + txt);
+		System.out.println("Object of type Integer: num = " + num);
+		
+		System.out.println();
+		
+		System.out.println("****Calling printArgs() method of GenericMethods class"
+				+ "with different order on the parameters****");
+		System.out.println();
+		
+		GenericMethods.<Persona, String, Integer>printArgs(p, txt, num);
+		System.out.println();
+		GenericMethods.<String, Integer, Persona>printArgs(txt, num, p);
+		System.out.println();
+		GenericMethods.<Integer, Persona, String>printArgs(num, p, txt);
 	}
 
 }

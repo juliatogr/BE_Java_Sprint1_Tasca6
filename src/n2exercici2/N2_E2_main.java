@@ -1,6 +1,10 @@
-package n2exercici1;
+package n2exercici2;
 
-public class N1_E2_main {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class N2_E2_main {
 
 	public static void main(String[] args) {
 		
@@ -21,13 +25,20 @@ public class N1_E2_main {
 				+ " with different order on the parameters****");
 		System.out.println();
 		
-		// Necessito posar un string sempre al principi, sino dona error. 
-		// Els altres paràmetres poden passar-se en qualsevol ordre.
-		GenericMethods.<Persona, Integer>printArgs(txt, p, num);
+		// Creem 3 llistes amb els parametres en diferent ordre, generalitzant a tipus Object.
+		
+		List<Object> l1 = new ArrayList<Object>(Arrays.asList(txt, p, num));
+		List<Object> l2 = new ArrayList<Object>(Arrays.asList(p, txt,num));
+		List<Object> l3 = new ArrayList<Object>(Arrays.asList(num, p, txt));
+		
+		// Imprimim totes les llistes
+		GenericMethods.printArgs(l1);
 		System.out.println();
-		GenericMethods.<Integer, Persona>printArgs(txt, num, p);
+		GenericMethods.printArgs(l2);
 		System.out.println();
-		GenericMethods.<String, Integer>printArgs(txt, txt, num);
+		GenericMethods.printArgs(l3);
+		System.out.println();
+
 	}
 
 }

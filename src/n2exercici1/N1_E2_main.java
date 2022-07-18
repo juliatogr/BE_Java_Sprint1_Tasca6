@@ -1,4 +1,4 @@
-package n1exercici2;
+package n2exercici1;
 
 public class N1_E2_main {
 
@@ -21,11 +21,13 @@ public class N1_E2_main {
 				+ " with different order on the parameters****");
 		System.out.println();
 		
-		GenericMethods.<Persona, String, Integer>printArgs(p, txt, num);
+		// Necessito posar un string sempre al principi, sino dona error. 
+		// Els altres paràmetres poden passar-se en qualsevol ordre.
+		GenericMethods.<Persona, Integer>printArgs(txt, p, num);
 		System.out.println();
-		GenericMethods.<String, Integer, Persona>printArgs(txt, num, p);
+		GenericMethods.<Integer, Persona>printArgs(txt, num, p);
 		System.out.println();
-		GenericMethods.<Integer, Persona, String>printArgs(num, p, txt);
+		GenericMethods.<String, Integer>printArgs(txt, txt, num);
 	}
 
 }

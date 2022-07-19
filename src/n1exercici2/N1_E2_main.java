@@ -21,11 +21,11 @@ public class N1_E2_main {
 				+ " with different order on the parameters****");
 		System.out.println();
 		
-		GenericMethods.<Persona, String, Integer>printArgs(p, txt, num);
+		GenericMethods.printArgs(p, txt, num);
 		System.out.println();
-		GenericMethods.<String, Integer, Persona>printArgs(txt, num, p);
+		GenericMethods.printArgs(txt, num, p);
 		System.out.println();
-		GenericMethods.<Integer, Persona, String>printArgs(num, p, txt);
+		GenericMethods.printArgs(num, p, txt);
 	}
 
 }

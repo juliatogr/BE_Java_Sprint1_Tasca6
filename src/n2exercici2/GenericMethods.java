@@ -8,8 +8,8 @@ public class GenericMethods<S> {
 	public static <S> void printArgs(List<S> args) {
 		
 		int numArgs = args.size();
-		for (int i=1; i<=numArgs; i++) {
-			System.out.println("Argument #" + i + ": " + args.get(i-1));
+		for (int i=0; i<numArgs; i++) {
+			System.out.println("Argument #" + (i+1) + ": " + args.get(i));
 		}
 	}
 }

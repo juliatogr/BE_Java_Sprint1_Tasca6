@@ -23,11 +23,11 @@ public class N2_E1_main {
 		
 		// Necessito posar un string sempre al principi, sino dona error. 
 		// Els altres paràmetres poden passar-se en qualsevol ordre.
-		GenericMethods.<Persona, Integer>printArgs(txt, p, num);
+		GenericMethods.printArgs(txt, p, num);
 		System.out.println();
-		GenericMethods.<Integer, Persona>printArgs(txt, num, p);
+		GenericMethods.printArgs(txt, num, p);
 		System.out.println();
-		GenericMethods.<String, Integer>printArgs(txt, txt, num);
+		GenericMethods.printArgs(txt, txt, num);
 	}
 
 }
